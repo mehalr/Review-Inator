@@ -39,10 +39,7 @@ def sentiments(all_reviews):
     output3 = client.specific_resource_analysis(body={"document": {"text": all_reviews}},
                                                 params={'language': 'en', 'resource': 'sentiment'})
 
-    # print("Output overall sentiment:")
-    # print(output3.sentiment.positivity)
-    # print(output3.sentiment.negativity)
-    # print(output3.sentiment.overall)
+
     return(output3.sentiment.positivity,abs(output3.sentiment.negativity))
 
 def words_sentences(all_reviews):
@@ -70,14 +67,6 @@ def emotional_traits(all_reviews):
     return(emotion, score)
 
 
-if __name__=='__main__':
-    all_reviews = getReviews("https://www.amazon.in/New-Apple-iPhone-XR-64GB/dp/B08L8BK9V6")
-    print(all_reviews)
-    p, n= sentiments(all_reviews)
-    print(p,n)
-    w ,s = words_sentences(all_reviews)
-    print(w,s)
-    e , sc = emotional_traits(all_reviews)
-    print(e, sc)
+
 
 
