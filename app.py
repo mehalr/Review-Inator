@@ -80,6 +80,17 @@ if st.button('Analyse'):
                 elif counter%4 == 3:
                     st.error(sentence)
                 counter+=1
+    with st.container():
+        st.subheader('Final recommendation')
+        if negative > positive:
+            st.markdown('<p style="color:"red"; font-size: 18px;">Product/Service not recommended buying</p>', unsafe_allow_html=True)
+            lottie_dislike = load_lottieurl("https://assets9.lottiefiles.com/packages/lf20_L5FmEqdLn6.json")
+            st_lottie(lottie_dislike, key="dislike",height=500)
+        else:
+            st.markdown('<p style="color:"green"; font-size: 18px;">Product/Service recommended buying</p>',
+                        unsafe_allow_html=True)
+            lottie_buy = load_lottieurl("https://assets2.lottiefiles.com/packages/lf20_axztuerm.json")
+            st_lottie(lottie_buy, key="buy",height=500)
     data_load_state.text("Done!")
 
 
