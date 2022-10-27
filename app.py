@@ -68,7 +68,6 @@ if st.button('Analyse'):
 
         with right_column:
             st.subheader('Top sentences')
-            #sentences = ['This is a purely informational message','I hate the product','love the product']
             counter = 0
             for sentence in sentences:
                 if counter%4 == 0:
@@ -80,7 +79,7 @@ if st.button('Analyse'):
                 elif counter%4 == 3:
                     st.error(sentence)
                 counter+=1
-                
+
     with st.container():
         st.subheader('Final recommendation')
         if negative > positive:
