@@ -12,6 +12,9 @@
 - Expert.ai
 
 # Run the app
-- Install the packages from requirements.txt
-- Type the following in terminal
+
+Install packages from requirements.txt
+Run the following command
+
     $ streamlit run app.py
+
