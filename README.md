@@ -13,8 +13,7 @@
 
 # Run the app
 
-Install packages from requirements.txt
-Run the following command
+Install packages from requirements.txt and run the following command
 
     $ streamlit run app.py
 
