@@ -10,7 +10,6 @@ os.environ["EAI_PASSWORD"] = config('PASSWORD')
 
 client = ExpertAiClient()
 
-# success code - 200
 language = 'en'
 
 

@@ -64,7 +64,7 @@ if st.button('Analyse'):
                 st.markdown('<p style="background-color:'+colors[random.randint(0, 5)]+
                             '; font-size: 18px;border-radius: 12px;text-align: center">'+word+
                             '</p>',unsafe_allow_html=True)
-                #annotated_text((word,"",colors[random.randint(0, 5)]))
+      
 
         with right_column:
             st.subheader('Top sentences')
@@ -80,6 +80,7 @@ if st.button('Analyse'):
                 elif counter%4 == 3:
                     st.error(sentence)
                 counter+=1
+                
     with st.container():
         st.subheader('Final recommendation')
         if negative > positive:
